@@ -7,6 +7,7 @@
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
             margin: 0;
             padding: 0;
             background-color: #000;
@@ -18,22 +19,64 @@
             padding: 20px;
         }
         h1, h2 {
-            color: #0f0;
+            font-size: 1em;
         }
         p {
             white-space: pre;
+        }
+        .cursor {
+            display: inline-block;
+            width: 0.5em;
+            height: 1em;
+            background-color: #0f0;
+            animation: blink 1s steps(1) infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>frederik@homepage:~$</h1>
-        <p>
-cat <<EOF
-Willkommen auf meiner Homepage.
-Hier finden Sie Informationen über meine Projekte und Interessen im Bereich Softwareentwicklung und Elektronikbasteln.
-EOF
-        </p>
+        <h1>frederik@deep2web.net:~$ <span id="typed-text"></span><span class="cursor"></span></h1>
+        <p id="typed-info"></p>
+        <h1 id="new-line" style="display: none;">frederik@deep2web.net:~$</h1>
     </div>
+    <script>
+        const textElement = document.getElementById('typed-text');
+        const infoElement = document.getElementById('typed-info');
+        const newLineElement = document.getElementById('new-line');
+        const cursorElement = document.querySelector('.cursor');
+        const text = 'cat > about_me.txt';
+        const info = 'Willkommen auf meiner Homepage.\nHier finden Sie Informationen über meine Projekte und Interessen im Bereich Softwareentwicklung und Elektronik.';
+        let index = 0;
+        let infoIndex = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText, 100);  // adjust the typing speed here
+            } else {
+                typeInfo();
+            }
+        }
+
+        function typeInfo() {
+            if (infoIndex < info.length) {
+                infoElement.textContent += info.charAt(infoIndex);
+                infoElement.appendChild(cursorElement);
+                infoIndex++;
+                setTimeout(typeInfo, 25);  // adjust the typing speed here
+            } else {
+                setTimeout(() => {
+                    newLineElement.style.display = 'block';
+                    newLineElement.appendChild(cursorElement);
+                }, 1000);  // adjust the delay here
+            }
+        }
+
+        typeText();
+    </script>
 </body>
 </html>
