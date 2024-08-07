@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script>
+        function pruefeEingabe(event) {
+            event.preventDefault();  // Verhindert das Absenden des Formulars
+            alert('Falsch');  // Zeigt eine Nachricht an, dass die Eingabe falsch ist
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="pruefeEingabe(event)">
+        <label for="username">Benutzername:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pwd">Passwort:</label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+        <input type="submit" value="Absenden">
+    </form>
+</body>
+</html>
