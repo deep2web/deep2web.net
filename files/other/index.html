@@ -3,10 +3,7 @@
 <head>
     <title>Login</title>
     <script>
-        // Verschlüsselter HTML-Code
-        var verschluesselt = "PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KICAgIDx0aXRsZT5Mb2dpbjwvdGl0bGU+CiAgICA8c2NyaXB0PgogICAgICAgIGZ1bmN0aW9uIHBydWVmZUVpbmdhYmUoZXZlbnQpIHsKICAgICAgICAgICAgZXZlbnQucHJldmVudERlZmF1bHQoKTsgIC8vIFZlcmhpbmRlcnQgZGFzIEFic2VuZGVuIGRlcyBGb3JtdWxhcnMKICAgICAgICAgICAgYWxlcnQoJ0ZhbHNjaCcpOyAgLy8gWmVpZ3QgZWluZSBOYWNocmljaHQgYW4sIGRhc3MgZGllIEVpbmdhYmUgZmFsc2NoIGlzdAogICAgICAgIH0KICAgIDwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5Pgo8Zm9ybSBvbnN1Ym1pdD0icHJ1ZWZlRWluZ2FiZShldmVudCkiPjxpbmB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ1c2VybmFtZSI+PGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJBYnNlbmRlbiI+PC9mb3JtPgo8L2JvZHk+CjwvaHRtbD4K";
-
-        // Wenn die Seite geladen wird, entschlüsseln Sie den HTML-Code und fügen Sie ihn zum body-Element hinzu
+        var verschluesselt = "PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KICAgIDx0aXRsZT5Mb2dpbjwvdGl0bGU+CiAgICA8c2NyaXB0PgogICAgICAgIGZ1bmN0aW9uIHBydWVmZUVpbmdhYmUoZXZlbnQpIHsKICAgICAgICAgICAgZXZlbnQucHJldmVudERlZmF1bHQoKTsgIC8vIFZlcmhpbmRlcnQgZGFzIEFic2VuZGVuIGRlcyBGb3JtdWxhcnMKICAgICAgICAgICAgYWxlcnQoJ0ZhbHNjaCcpOyAgLy8gWmVpZ3QgZWluZSBOYWNocmljaHQgYW4sIGRhc3MgZGllIEVpbmdhYmUgZmFsc2NoIGlzdAogICAgICAgIH0KICAgIDwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5Pgo8Zm9ybSBvbnN1Ym1pdD0icHJ1ZWZlRWluZ2FiZShldmVudCkiPjxwPjxMYWJlbCBmb3I9InVzZXJuYW1lIj5CZW51dHplcm5hbWU6PC9MYWJlbD48aW5wdXQgdHlwZT0idGV4dCIgaWQ9InVzZXJuYW1lIiBuYW1lPSJ1c2VybmFtZSI+PC9wPjxwPjxMYWJlbCBmb3I9InBhc3N3b3JkIj5QYXNzd29ydDo8L0xhYmVsPjxJbnB1dCB0eXBlPSJwYXNzd29yZCIgaWQ9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjwvcD48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iQWJzZW5kZW4iPjwvZm9ybT4KPC9ib2R5Pgo8L2h0bWw+Cg==";
         window.onload = function() {
             var entschluesselt = atob(verschluesselt);
             document.body.innerHTML = entschluesselt;
