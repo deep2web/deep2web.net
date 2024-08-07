@@ -3,19 +3,16 @@
 <head>
     <title>Login</title>
     <script>
-        function pruefeEingabe(event) {
-            event.preventDefault();  // Verhindert das Absenden des Formulars
-            alert('Falsch');  // Zeigt eine Nachricht an, dass die Eingabe falsch ist
+        // Verschlüsselter HTML-Code
+        var verschluesselt = "PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KICAgIDx0aXRsZT5Mb2dpbjwvdGl0bGU+CiAgICA8c2NyaXB0PgogICAgICAgIGZ1bmN0aW9uIHBydWVmZUVpbmdhYmUoZXZlbnQpIHsKICAgICAgICAgICAgZXZlbnQucHJldmVudERlZmF1bHQoKTsgIC8vIFZlcmhpbmRlcnQgZGFzIEFic2VuZGVuIGRlcyBGb3JtdWxhcnMKICAgICAgICAgICAgYWxlcnQoJ0ZhbHNjaCcpOyAgLy8gWmVpZ3QgZWluZSBOYWNocmljaHQgYW4sIGRhc3MgZGllIEVpbmdhYmUgZmFsc2NoIGlzdAogICAgICAgIH0KICAgIDwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5Pgo8Zm9ybSBvbnN1Ym1pdD0icHJ1ZWZlRWluZ2FiZShldmVudCkiPjxpbmB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ1c2VybmFtZSI+PGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJBYnNlbmRlbiI+PC9mb3JtPgo8L2JvZHk+CjwvaHRtbD4K";
+
+        // Wenn die Seite geladen wird, entschlüsseln Sie den HTML-Code und fügen Sie ihn zum body-Element hinzu
+        window.onload = function() {
+            var entschluesselt = atob(verschluesselt);
+            document.body.innerHTML = entschluesselt;
         }
     </script>
 </head>
 <body>
-    <form onsubmit="pruefeEingabe(event)">
-        <label for="username">Benutzername:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="pwd">Passwort:</label><br>
-        <input type="password" id="pwd" name="pwd"><br>
-        <input type="submit" value="Absenden">
-    </form>
 </body>
 </html>
